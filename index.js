@@ -12,7 +12,7 @@ app.use(express.static('public')); // Serve static files
 
 // Serve the HTML form when visiting the root URL
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
 
 app.post('/submit', upload.none(), (req, res) => {
