@@ -16,7 +16,8 @@ app.post('/submit', upload.none(), (req, res) => {
     
     const doc = new PDFDocument();
     res.setHeader('Content-Type', 'applicatio/pdf')
-    res.setHeader('Content-Disposition','attachment;filename=downloaded.pdf);
+    res.setHeader('Content-Disposition', 'attachment; filename="downloaded.pdf"');
+
 
     doc.pipe(res);
     
